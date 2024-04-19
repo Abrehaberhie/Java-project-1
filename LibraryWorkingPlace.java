@@ -26,7 +26,8 @@ public class LibraryWorkingPlace {
             System.out.println("If you want to return the book please Press   'c'");
             System.out.println("If you want to our visitors please enter       'D'");
             System.out.println("if you want to see people who work in the library press   'E'");
-            System.out.println("If you want to exit from our system please press 'F'");
+            System.out.println("if you want to see our library locations pleaase press 'F'");
+            System.out.println("If you want to exit from our system please press 'G'");
             System.out.print("Enter your choice: ");
             char choice = scanner.next().charAt(0);
 
@@ -71,9 +72,14 @@ public class LibraryWorkingPlace {
 	                	System.out.println("here are list of library imployee");
 	                	librarian.getListOfLibraryemployee();
 	                	break;
-	                	
-	                	
 	                case 'F':
+	                	scanner.nextLine();
+	                	System.out.println("here are list of our library locations");
+	                	library.getListOfLibraryLocations();
+	                	break;
+	                	
+	                	
+	                case 'G':
 	                    System.out.println("You are leaving our library. Goodbye!");
 	                    System.exit(0);
 	                default:

@@ -1,6 +1,8 @@
 package libraryProjectToBeSubmitted;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Library {
 	
@@ -32,5 +34,40 @@ public class Library {
 	        }
 	        return null;
 	    }
+	    
+public void getListOfLibraryLocations()
+	    
+	    {
+	    Map<String, String> libraLocation = new HashMap<>();
 
+        // Adding key-value pairs to the map
+	    libraLocation.put("Washington dc", "district of columbia");
+	    libraLocation.put("Clifornia", "Sacramento");
+	    libraLocation.put("Colorado", "denver");
+	    libraLocation.put("Georgia ", "Atlanta");
+	    libraLocation.put("Illinois", "SpringField");
+	    libraLocation.put("Kensas", "Topoka");
+	    libraLocation.put("Maryland", "Annapolis");
+	    libraLocation.put("Levada", "Carson City");
+	    libraLocation.put("Washington dc", "district of columbia");
+	    libraLocation.put("Clifornia", "Sacramento");
+	    libraLocation.put("Colorado", "denver");
+	    libraLocation.put("Georgia ", "Atlanta");
+	    libraLocation.put("Illinois", "SpringField");
+	    libraLocation.put("Kensas", "Topoka");
+	    libraLocation.put("Maryland", "Annapolis");
+	    libraLocation.put("XXXX", "Carson City");
+
+     
+
+        // Iterating over the map
+        for (Map.Entry<String, String> entry : libraLocation.entrySet()) {
+             entry.getKey();
+            entry.getValue();
+            System.out.println(entry.getKey()+"     " + entry.getValue());
+	    	
+	    	
+        }
+
+}
 }
