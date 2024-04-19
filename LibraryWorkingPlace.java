@@ -6,7 +6,7 @@ public class LibraryWorkingPlace {
 	public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Library library = new Library();
-       // Librarian librarian = new Librarian("John");
+        Librarian librarian = new Librarian();
 
         // Adding books to the library
         library.addBook(new Book("A Tele of Two cities", "charles Dickens"));
@@ -16,13 +16,17 @@ public class LibraryWorkingPlace {
         library.addBook(new Book("Lolita","viadmir Nabokov"));
         library.addBook(new Book("Black beauty","Anna Sewell"));
         library.addBook(new Book("Anne of Green Gables","Lucy Maud"));
-
-        while (true) {
+        
+       User user = new User();
+            
+           while(true) {
             System.out.println("We are very happy to see you in our libary!");
             System.out.println("If you want to see the available books please 'A'");
             System.out.println("If you want to borrow a book please press     'B'");
             System.out.println("If you want to return the book please Press   'c'");
-            System.out.println("If you want to exit from our system please press 'D'");
+            System.out.println("If you want to our visitors please enter       'D'");
+            System.out.println("if you want to see people who work in the library press   'E'");
+            System.out.println("If you want to exit from our system please press 'F'");
             System.out.print("Enter your choice: ");
             char choice = scanner.next().charAt(0);
 
@@ -55,6 +59,21 @@ public class LibraryWorkingPlace {
 	                    }
 	                    break;
 	                case 'D':
+	                	 //User user = new User();
+	                	scanner.nextLine();
+	                	System.out.println("here are list of our recent visitors");
+	                	
+	                     user.getListOfusers();
+	                     
+	                    break;
+	                case 'E':
+	                	scanner.nextLine();
+	                	System.out.println("here are list of library imployee");
+	                	librarian.getListOfLibraryemployee();
+	                	break;
+	                	
+	                	
+	                case 'F':
 	                    System.out.println("You are leaving our library. Goodbye!");
 	                    System.exit(0);
 	                default:
